@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klimbnow Skills Checklist</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body >
+ <header>
+  <div class="container">
+    <a href="https://www.klimbnow.com/" target="_blank" class="logo">
+      <img src="img/klimbnow-logo.png" alt="Klimbnow">
+    </a>
+  </div>
+ </header>
+
+<video autoplay muted loop playsinline class="bg-video">
+  <source src="videowall.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>SKILLS CHECKLIST</h2>
+      <p>Curious about starting a career as a travel healthcare professional but unsure what skills you need? Or are you an experienced traveler exploring opportunities in a new specialty?</p>
+      <ul>
+        <li>Highlights your skills and experience</li>
+        <li>Connects you with the right assignments</li>
+        <li>Supports hiring managers in making informed choices</li>
+        <li>Promotes honest self-evaluation and growth</li>
+      </ul>
+    </div>
+    <div class="hero-img">
+      <img src="skillimage.png" alt="Checklist Illustration">
+    </div>
+  </section>
+
+  <section class="filters">
+    <button onclick="showAll()">All</button>
+    <button onclick="filterByCategory('nursing')">Nursing Skills</button>
+    <button onclick="filterByCategory('allied')">Allied Health Skills</button>
+    <button onclick="filterByCategory('rehab')">Rehab Therapy Skills</button>
+    <input type="text" id="searchInput" placeholder="Search here..." onkeyup="searchSkills()" />
+  </section>
+
+  <!-- Nursing Skills -->
+  <section class="skills-section" id="nursing">
+    <h2>Nursing Skills Checklists</h2>
+    <div class="skills-grid">
+      <div class="card slide-in-left">LPN/LVN<br><a href="https://forms.gle/pZ63s2Xu8xZ71SkS9">Attempt Checklist</a></div>
+      <div class="card slide-in-left">Registered Nurse LTC<br><a href="https://forms.gle/hpN9NRmkuAyd9gh46">Attempt Checklist</a></div>
+      <div class="card slide-in-left">RN-ER<br><a href="https://forms.gle/FA6PxeHEQ5C3oX3s8">Attempt Checklist</a></div>
+      <div class="card slide-in-left">Med/Surg<br><a href="https://forms.gle/WLBjE6K6c2Gg5Ru28">Attempt Checklist</a></div>
+      <div class="card slide-in-left">RN-OR<br><a href="https://forms.gle/nFmxQ9bCmeLXzj2P7">Attempt Checklist</a></div>
+      <div class="card slide-in-left">Ambulatory<br><a href="https://forms.gle/otx3fZxnZaDZf2p98">Attempt Checklist</a></div>
+      <div class="card slide-in-left">Outpatient Clinic<br><a href="https://forms.gle/otx3fZxnZaDZf2p98">Attempt Checklist</a></div>
+      <div class="card slide-in-left">ICU<br><a href="https://forms.gle/U2DrDrPh1B638MMP6">Attempt Checklist</a></div>
+      <div class="card slide-in-left">PCU <br><a href="https://forms.gle/mVozjvqGzNhvE6UN9">Attempt Checklist</a></div>
+      <div class="card slide-in-left">Intermediate<br><a href="https://forms.gle/mVozjvqGzNhvE6UN9">Attempt Checklist</a></div>
+      <div class="card slide-in-left">Stepdown<br><a href="https://forms.gle/mVozjvqGzNhvE6UN9">Attempt Checklist</a></div>
+      <div class="card slide-in-left">Observation Unit<br><a href="https://forms.gle/mVozjvqGzNhvE6UN9">Attempt Checklist</a></div>
+      <div class="card slide-in-left">L&D<br><a href="https://forms.gle/s7oqHeUN44mo5WFe9">Attempt Checklist</a></div>
+      <div class="card slide-in-left">Psych<br><a href="https://forms.gle/hPvxS9FGjN6rc8Ze9">Attempt Checklist</a></div>
+      <div class="card slide-in-left">Nurse Manager Supervisor<br><a href="https://forms.gle/BQFVw1wAouDRh3c9A">Attempt Checklist</a></div>
+      <div class="card slide-in-left">Endoscopy<br><a href="https://forms.gle/M6agt7s9HSXqnY6F7">Attempt Checklist</a></div>
+      <div class="card slide-in-left">PACU<br><a href="https://forms.gle/L3U3vxEToschSRUb7">Attempt Checklist</a></div>
+    </div>
+  </section>
+
+  <!-- Allied Health Skills -->
+  <section class="skills-section" id="allied">
+    <h2>Allied Health Skills Checklists</h2>
+    <div class="skills-grid">
+      <div class="card">RRT/CRT<br><a href="https://forms.gle/8DB2YPYqeGsSNbqP9">Attempt Checklist</a></div>
+      <div class="card">Physical Therapist<br><a href="https://forms.gle/3FhyU33xRu6erMxt8">Attempt Checklist</a></div>
+      <div class="card">Physical Therapist Assistant <br><a href="https://forms.gle/xcjWgUDF6QtH1Gpm8">Attempt Checklist</a></div>
+      <div class="card">Certified Surgical Technologist<br><a href="https://forms.gle/GRrfkUcwECqN7CBY8">Attempt Checklist</a></div>
+      <div class="card">X-Ray Tech<br><a href="https://forms.gle/S3nxCmFA7s9kQRJZ8">Attempt Checklist</a></div>
+      <div class="card">Sterile Processing Tech<br><a href="https://forms.gle/WE6WwYvbxM8GHVw18">Attempt Checklist</a></div>
+      <div class="card">Cardiac Echo Tech<br><a href="https://forms.gle/8o8Wz6kcTW3GKyR89">Attempt Checklist</a></div>
+      <div class="card">MRI Tech<br><a href="https://forms.gle/Qi1t9dt7y8ff1qqj6">Attempt Checklist</a></div>
+      <div class="card">Ultrasound Tech<br><a href="https://forms.gle/exehLddp1Edfzn9b6">Attempt Checklist</a></div>
+      <div class="card">Patient Care Technician <br><a href="https://forms.gle/a5GvDZKMWb9tofH5A">Attempt Checklist</a></div>
+      <div class="card">Medical Lab Tech<br><a href="https://forms.gle/GRBo9Yh5piFdjQZ87">Attempt Checklist</a></div>
+      <div class="card">Anesthesia Tech<br><a href="https://forms.gle/tgXuPrqLbi8gVSeX9">Attempt Checklist</a></div>
+      <div class="card">Phlebotomist<br><a href="https://forms.gle/6EPgH4yDXhLkRw9t6">Attempt Checklist</a></div>
+      <div class="card">Monitor Tech<br><a href="https://forms.gle/hY36HZqLefhLf9fP7">Attempt Checklist</a></div>
+      <div class="card">Paramedic<br><a href="https://forms.gle/8poKFXku65D11jeK7">Attempt Checklist</a></div>
+      <div class="card">EP Tech<br><a href="https://forms.gle/e5sZGbdwfo5dLc6t9">Attempt Checklist</a></div>
+      <div class="card">Psych Tech<br><a href="https://forms.gle/27im53mKU5xPvbux7">Attempt Checklist</a></div>
+    </div>
+  </section>
+
+  <!-- Rehab Therapy Skills -->
+  <section class="skills-section" id="rehab">
+    <h2>Rehab Therapy Skills Checklists</h2>
+    <div class="skills-grid">
+      <div class="card">CNA<br><a href="https://forms.gle/w6LqEF7dPsdDQRWQ7">Attempt Checklist</a></div>
+      <div class="card">Clinical Social Worker<br><a href="https://forms.gle/EG1Ua3r3hVyeKqaq6">Attempt Checklist</a></div>
+    </div>
+  </section>
+
+<footer>
+  <div class="footer-wrapper">
+    <div class="footer-left">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:support@klimbnow.com">Support@klimbnow.com</a></p>
+      <p>Phone: +1-315-609-8811</p>
+      <p>Location: RENO, NV 89502</p>
+    </div>
+    <div class="footer-right">
+      <div class="footer-right">
+  <p>Follow us:
+    <a href="https://www.facebook.com/klimbnow"><i class="fab fa-facebook-f"></i> Facebook</a> |
+    <a href="https://www.linkedin.com/company/klimbnow/"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+  </p>
+</div>
+  </div>
+  <div class="footer-bottom">
+  Copyright ©2025 All rights reserved | This template is made with ❤️ by Ajay
+</div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
