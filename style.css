@@ -31,16 +31,16 @@ body {
 
 header {
   position: fixed;
-  top: 15px;
+  /* top: 0; */
   left: 50%;
   transform: translateX(-50%);
-  width: 92%;
-  max-width: 1000px;
+  width: 100%;
+  max-width: 100%;
   padding: 12px 0;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 40px;
-  backdrop-filter: blur(14px);
-  box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+  background: rgb(255 255 255);
+  /* border-radius: 0; */
+  /* backdrop-filter: blur(14px); */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
   z-index: 40;
   animation: slideDownSoft 0.9s ease;
   transition: 0.3s ease;
@@ -54,7 +54,8 @@ header {
 header .container {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  padding-left: 7%;
 }
 
 header img {
@@ -147,16 +148,15 @@ header img:hover {
 /* -------------------------- */
 
 .filters {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin: 20px auto 40px;
-  padding: 10px;
+  justify-content: right;
+  gap: 25px;
+  padding: 10px 7%;
 }
 
 .filters button {
-  padding: 10px 22px;
+  padding: 8px 18px;
   border: none;
   font-size: 0.95rem;
   border-radius: 25px;
@@ -172,6 +172,48 @@ header img:hover {
 }
 
 #searchInput {
+  padding: 8px 18px;
+  min-width: 120px;
+  border-radius: 20px;
+  border: 2px solid #004b80;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+
+@media (max-width: 956px) {
+  .filters {
+    display: none;
+  }
+}
+
+/* -------------- Middle Filter Section --------- */
+.filters-mid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px auto 40px;
+  padding: 10px;
+}
+
+.filters-mid button {
+  padding: 10px 22px;
+  border: none;
+  font-size: 0.95rem;
+  border-radius: 25px;
+  cursor: pointer;
+  background: #004b80;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.filters-mid button:hover {
+  background: #006fbf;
+  transform: scale(1.05);
+}
+
+#searchInput-mid {
   padding: 10px 18px;
   min-width: 250px;
   border-radius: 20px;
@@ -183,6 +225,13 @@ header img:hover {
 #searchInput:focus {
   border-color: #006fbf;
   box-shadow: 0px 0px 6px #0077cc;
+}
+
+
+@media (min-width: 957px) {
+  .filters-mid {
+    display: none;
+  }
 }
 
 /* -------------------------- */
