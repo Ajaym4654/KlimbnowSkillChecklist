@@ -1,258 +1,291 @@
+/* -------------------------- */
+/* GLOBAL  */
+/* -------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* Smooth fade animations */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------------- */
+/* HEADER  */
+/* -------------------------- */
+
+
+header {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 1000px;
+  padding: 12px 0;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 40px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+  z-index: 40;
+  animation: slideDownSoft 0.9s ease;
+  transition: 0.3s ease;
+}
+
+@keyframes slideDownSoft {
+  from { opacity: 0; transform: translate(-50%, -60px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+header .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  height: 55px;
+  transition: 0.3s ease;
+}
+
+header img:hover {
+  transform: scale(1.06);
+  filter: drop-shadow(0px 0px 6px #00baff);
+}
+
+/* -------------------------- */
+/* BG VIDEO */
+/* -------------------------- */
+
 .bg-video {
   position: fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  opacity: 0.25;
   z-index: -1;
-  opacity: 0.85;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: none;
-  overflow-x: hidden;
-}
-
-header {
-  background: linear-gradient(to bottom right, #ece6e6, #a558ba);
-  border-bottom: 1px solid #fcfcfc;
-  padding: 15px 0;
-}
-
-.container {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.logo img {
-  width: 120px;
-  height: auto;
-  display: block;
-}
+/* -------------------------- */
+/* HERO SECTION */
+/* -------------------------- */
 
 .hero {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 40px 20px;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 150px 5% 60px;
+  gap: 30px;
+  align-items: center;
 }
 
 .hero-text {
-  color: black;
-  flex: 1 1 400px;
-  padding: 20px;
+  max-width: 550px;
+  animation: fadeIn 1.2s ease;
 }
 
 .hero-text h2 {
-  font-size: 28px;
+  font-size: 3rem;
+  color: #004b80;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
   margin-bottom: 15px;
+  line-height: 1.6;
 }
 
 .hero-text ul {
-  margin-top: 10px;
-  list-style: disc inside;
+  list-style: none;
+}
+
+.hero-text ul li {
+  margin: 7px 0;
+  padding-left: 18px;
+  position: relative;
+}
+
+.hero-text ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #0077cc;
+  font-weight: bold;
 }
 
 .hero-img img {
-  width: 300px;
-  height: auto;
+  width: 340px;
+  animation: floatUp 3s infinite ease-in-out;
 }
+
+@keyframes floatUp {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* -------------------------- */
+/* FILTER BUTTONS */
+/* -------------------------- */
 
 .filters {
-  text-align: center;
-  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px auto 40px;
+  padding: 10px;
 }
 
-.filters button,
-.filters input {
-  margin: 10px;
-  padding: 10px 15px;
-  border: 1px solid #007bff;
-  background-color: #fff;
-  border-radius: 4px;
+.filters button {
+  padding: 10px 22px;
+  border: none;
+  font-size: 0.95rem;
+  border-radius: 25px;
   cursor: pointer;
+  background: #004b80;
+  color: white;
+  transition: 0.3s ease;
 }
 
-.filters input {
-  width: 200px;
+.filters button:hover {
+  background: #006fbf;
+  transform: scale(1.05);
 }
+
+#searchInput {
+  padding: 10px 18px;
+  min-width: 250px;
+  border-radius: 20px;
+  border: 2px solid #004b80;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+#searchInput:focus {
+  border-color: #006fbf;
+  box-shadow: 0px 0px 6px #0077cc;
+}
+
+/* -------------------------- */
+/* SKILLS GRID */
+/* -------------------------- */
 
 .skills-section {
-  color: rgb(15, 0, 152);
-  padding: 50px 20px;
-  text-align: center;
+  width: 90%;
+  margin: auto;
+  max-width: 1400px;
+  padding-bottom: 50px;
+  animation: fadeIn 1s ease;
 }
 
 .skills-section h2 {
-  font-size: 24px;
-  margin-bottom: 30px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #004b80;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 20px;
 }
 
 .card {
-  background-color: #ffffff;
-  color: #000000;
+  background: white;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 18px;
   text-align: center;
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  animation: fadeIn 0.8s ease;
 }
 
 .card:hover {
-  transform: scale(1.1);
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 .card a {
-  display: block;
   margin-top: 10px;
-  color: #ff0037;
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  background: #0077cc;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.card a:hover {
+  background: #005fa3;
+  transform: scale(1.05);
+}
+
+/* -------------------------- */
+/* FOOTER */
+/* -------------------------- */
+
+footer {
+  background: #002f4d;
+  color: white;
+  margin-top: 40px;
+  padding: 40px 5%;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.footer-left p a {
+  color: #7cc8ff;
   text-decoration: none;
 }
 
-footer {
-  background-color: #bee3fc;
-  color: rgb(15, 0, 152);
-  padding: 30px 20px;
-  font-family: Arial, sans-serif;
+.footer-right a {
+  color: #7cc8ff;
+  text-decoration: none;
 }
 
-.footer-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  text-align: left;
+.footer-bottom a {
+  color: #7cc8ff;
+  font-weight: bold;
 }
 
-.footer-left,
-.footer-right {
-  flex: 1;
-  min-width: 280px;
-  margin: 10px 0;
-}
+/* -------------------------- */
+/* RESPONSIVE */
+/* -------------------------- */
 
-.footer-left h3 {
-  margin-top: 0;
-}
-
-/* Reset for proper layout */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* Page content wrapper so footer stays at bottom */
-.content {
-  min-height: calc(100vh - 80px); /* 80px = footer height */
-}
-
-/* Full footer area */
-footer {
-  background-color: #bee3fc;
-  color: rgb(15, 0, 152);
-  padding: 30px 20px;
-  font-family: Arial, sans-serif;
-}
-
-/* Footer content layout */
-.footer-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  text-align: left;
-}
-
-.footer-left,
-.footer-right {
-  flex: 1;
-  min-width: 280px;
-  margin: 10px 0;
-}
-
-.footer-left h3 {
-  margin-top: 0;
-}
-
-/* Footer links */
-footer a {
-  color: rgb(15, 0, 152);
-  text-decoration: none;  /* no underline */
-  font-weight: 600;
-}
-
-/* Bottom strip */
-.footer-bottom {
-  width: 100%;
-  background: #b2d5ff;
-  color: #ed0000;
-  text-align: center;
-  padding: 10px 0;
-  border-top: 1px solid #ddd;
-}
-
-
-/* Responsive Media Queries */
 @media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero {
-    flex-direction: column;
-  }
-
-  .hero-img img {
-    width: 80%;
-    max-width: 250px;
-    margin: 20px 0;
-  }
-
-  .hero-text h2 {
-    font-size: 24px;
-  }
-
-  .filters input {
-    width: 90%;
-    max-width: 300px;
-  }
-
-  .skills-section h2 {
-    font-size: 22px;
-  }
+  .hero-text h2 { font-size: 2.2rem; }
+  .hero-img img { width: 250px; }
+  header img { height: 45px; }
 }
 
 @media (max-width: 480px) {
-  .hero-text h2 {
-    font-size: 20px;
-  }
-
-  .filters input {
-    width: 100%;
-  }
-
-  .footer-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-left,
-  .footer-right {
-    min-width: 100%;
-  }
+  .filters button { font-size: 0.8rem; }
+  #searchInput { width: 200px; }
 }
-
