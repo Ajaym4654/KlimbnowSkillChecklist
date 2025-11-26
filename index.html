@@ -14,6 +14,13 @@
     <a href="https://www.klimbnow.com/" target="_blank" class="logo">
       <img src="img/klimbnow-logo.png" alt="Klimbnow">
     </a>
+    <section class="filters">
+      <button id="top" onclick="scrollToSection('nursing-section')">Nursing Skills</button>
+      <button onclick="scrollToSection('allied-section')">Allied Health Skills</button>
+      <button onclick="scrollToSection('rehab-section')">Clinical Skills</button>
+    
+      <input type="text" id="searchInput" placeholder="Search here..." onkeyup="searchSkills()" />
+    </section>
   </div>
  </header>
 
@@ -33,82 +40,100 @@
     </div>
   </section>
 
-  <section class="filters">
-    <button onclick="showAll()">All</button>
-    <button onclick="filterByCategory('nursing')">Nursing Skills</button>
-    <button onclick="filterByCategory('allied')">Allied Health Skills</button>
-    <button onclick="filterByCategory('rehab')">Clinical Skills</button>
-    <input type="text" id="searchInput" placeholder="Search here..." onkeyup="searchSkills()" />
-  </section>
-  
-  <!-- Nursing Skills -->
-  <section class="skills-section" id="nursing">
-    <h2>Nursing Skills Checklists</h2>
-    <div class="skills-grid">
-      <div class="card">CNA<br><a href="https://forms.gle/w6LqEF7dPsdDQRWQ7">Attempt Checklist</a></div>
-      <div class="card slide-in-left">LPN/LVN<br><a href="https://forms.gle/pZ63s2Xu8xZ71SkS9">Attempt Checklist</a></div>
-      <div class="card slide-in-left">Registered Nurse LTC<br><a href="https://forms.gle/hpN9NRmkuAyd9gh46">Attempt Checklist</a></div>
-      <div class="card slide-in-left">RN-ER<br><a href="https://forms.gle/FA6PxeHEQ5C3oX3s8">Attempt Checklist</a></div>
-      <div class="card slide-in-left">Med/Surg<br><a href="https://forms.gle/WLBjE6K6c2Gg5Ru28">Attempt Checklist</a></div>
-      <div class="card slide-in-left">RN-OR<br><a href="https://forms.gle/nFmxQ9bCmeLXzj2P7">Attempt Checklist</a></div>
-      <div class="card slide-in-left">Ambulatory<br><a href="https://forms.gle/otx3fZxnZaDZf2p98">Attempt Checklist</a></div>
-      <div class="card slide-in-left">Outpatient Clinic<br><a href="https://forms.gle/otx3fZxnZaDZf2p98">Attempt Checklist</a></div>
-      <div class="card slide-in-left">ICU<br><a href="https://forms.gle/U2DrDrPh1B638MMP6">Attempt Checklist</a></div>
-      <div class="card slide-in-left">PCU <br><a href="https://forms.gle/mVozjvqGzNhvE6UN9">Attempt Checklist</a></div>
-      <div class="card slide-in-left">Intermediate<br><a href="https://forms.gle/mVozjvqGzNhvE6UN9">Attempt Checklist</a></div>
-      <div class="card slide-in-left">Stepdown<br><a href="https://forms.gle/mVozjvqGzNhvE6UN9">Attempt Checklist</a></div>
-      <div class="card slide-in-left">Observation Unit<br><a href="https://forms.gle/mVozjvqGzNhvE6UN9">Attempt Checklist</a></div>
-      <div class="card slide-in-left">L&D<br><a href="https://forms.gle/s7oqHeUN44mo5WFe9">Attempt Checklist</a></div>
-      <div class="card slide-in-left">Psych<br><a href="https://forms.gle/hPvxS9FGjN6rc8Ze9">Attempt Checklist</a></div>
-      <div class="card slide-in-left">Nurse Manager Supervisor<br><a href="https://forms.gle/BQFVw1wAouDRh3c9A">Attempt Checklist</a></div>
-      <div class="card slide-in-left">RN Endoscopy<br><a href="https://forms.gle/M6agt7s9HSXqnY6F7">Attempt Checklist</a></div>
-      <div class="card slide-in-left">PACU<br><a href="https://forms.gle/st1BjT1F239i9qm3A">Attempt Checklist</a></div>
-      <div class="card slide-in-left">Oncology<br><a href="https://forms.gle/iTmALFoZqs26NVh7A">Attempt Checklist</a></div>
-      <div class="card slide-in-left">Phone Triage<br><a href="https://forms.gle/UBNAMfCkUw6qQzZo8">Attempt Checklist</a></div>
-      <div class="card slide-in-left">Case Manager<br><a href="https://forms.gle/BwQHrd5Mhcz9zLHKA">Attempt Checklist</a></div>
-      <div class="card slide-in-left">Wound Care<br><a href="https://forms.gle/mNRcXA4D2S7dep7RA">Attempt Checklist</a></div>
-      <div class="card slide-in-left">PICC<br><a href="https://forms.gle/AMCpaUNcY3iCuVmR8">Attempt Checklist</a></div>
+<section class="filters-mid">
+  <button onclick="scrollToSection('nursing-section')">Nursing Skills</button>
+  <button onclick="scrollToSection('allied-section')">Allied Health Skills</button>
+  <button onclick="scrollToSection('rehab-section')">Clinical Skills</button>
+
+  <input type="text" id="searchInput" placeholder="Search here..." onkeyup="searchSkills()" />
+</section>
+<!-- Nursing Skills -->
+<section id="nursing-section" class="skills-section">
+
+  <h2>Nursing Skills Checklists</h2>
+  <div class="skills-grid">
+    <div class="card">CNA<br><a href="https://forms.gle/w6LqEF7dPsdDQRWQ7">Attempt Checklist</a></div>
+    <div class="card slide-in-left">LPN/LVN<br><a href="https://forms.gle/pZ63s2Xu8xZ71SkS9">Attempt Checklist</a></div>
+    <div class="card slide-in-left">Registered Nurse LTC<br><a href="https://forms.gle/hpN9NRmkuAyd9gh46">Attempt
+        Checklist</a></div>
+    <div class="card slide-in-left">RN-ER<br><a href="https://forms.gle/FA6PxeHEQ5C3oX3s8">Attempt Checklist</a></div>
+    <div class="card slide-in-left">Med/Surg<br><a href="https://forms.gle/WLBjE6K6c2Gg5Ru28">Attempt Checklist</a>
     </div>
-  </section>
-
-  <!-- Allied Health Skills -->
-  <section class="skills-section" id="allied">
-    <h2>Allied Health Skills Checklists</h2>
-    <div class="skills-grid">
-      <div class="card">RRT/CRT<br><a href="https://forms.gle/8DB2YPYqeGsSNbqP9">Attempt Checklist</a></div>
-      <div class="card">Physical Therapist<br><a href="https://forms.gle/3FhyU33xRu6erMxt8">Attempt Checklist</a></div>
-      <div class="card">Physical Therapist Assistant <br><a href="https://forms.gle/xcjWgUDF6QtH1Gpm8">Attempt Checklist</a></div>
-      <div class="card">Certified Surgical Technologist<br><a href="https://forms.gle/GRrfkUcwECqN7CBY8">Attempt Checklist</a></div>
-      <div class="card">X-Ray Tech<br><a href="https://forms.gle/S3nxCmFA7s9kQRJZ8">Attempt Checklist</a></div>
-      <div class="card">Sterile Processing Tech<br><a href="https://forms.gle/WE6WwYvbxM8GHVw18">Attempt Checklist</a></div>
-      <div class="card">Cardiac Echo Tech<br><a href="https://forms.gle/8o8Wz6kcTW3GKyR89">Attempt Checklist</a></div>
-      <div class="card">MRI Tech<br><a href="https://forms.gle/Qi1t9dt7y8ff1qqj6">Attempt Checklist</a></div>
-      <div class="card">Ultrasound Tech<br><a href="https://forms.gle/exehLddp1Edfzn9b6">Attempt Checklist</a></div>
-      <div class="card">Patient Care Technician <br><a href="https://forms.gle/a5GvDZKMWb9tofH5A">Attempt Checklist</a></div>
-      <div class="card">Medical Lab Tech<br><a href="https://forms.gle/GRBo9Yh5piFdjQZ87">Attempt Checklist</a></div>
-      <div class="card">Anesthesia Tech<br><a href="https://forms.gle/tgXuPrqLbi8gVSeX9">Attempt Checklist</a></div>
-      <div class="card">Phlebotomist<br><a href="https://forms.gle/6EPgH4yDXhLkRw9t6">Attempt Checklist</a></div>
-      <div class="card">Monitor Tech<br><a href="https://forms.gle/hY36HZqLefhLf9fP7">Attempt Checklist</a></div>
-      <div class="card">Paramedic<br><a href="https://forms.gle/8poKFXku65D11jeK7">Attempt Checklist</a></div>
-      <div class="card">EP Tech<br><a href="https://forms.gle/e5sZGbdwfo5dLc6t9">Attempt Checklist</a></div>
-      <div class="card">Psych Tech<br><a href="https://forms.gle/27im53mKU5xPvbux7">Attempt Checklist</a></div>
-      <div class="card">Pathology Assistant<br><a href="https://forms.gle/tmm8MsUKkhsTCzdq6">Attempt Checklist</a></div>
-      <div class="card">Endoscopy Tech<br><a href="https://forms.gle/vbNSnQmjwM5xds5R9">Attempt Checklist</a></div>
-      <div class="card">Sleep Tech<br><a href="https://forms.gle/6ahSMhUvBgHCiH4y7">Attempt Checklist</a></div>
-      <div class="card">CT Tech<br><a href="https://forms.gle/bH6cVt9zDUzGBrrVA">Attempt Checklist</a></div>
-      <div class="card">Pharmacy Tech<br><a href="https://forms.gle/1bW8TvUPG9JcFve88">Attempt Checklist</a></div>
+    <div class="card slide-in-left">RN-OR<br><a href="https://forms.gle/nFmxQ9bCmeLXzj2P7">Attempt Checklist</a></div>
+    <div class="card slide-in-left">Ambulatory<br><a href="https://forms.gle/otx3fZxnZaDZf2p98">Attempt Checklist</a>
     </div>
-  </section>
-
-  <!-- Rehab Therapy Skills -->
-  <section class="skills-section" id="rehab">
-    <h2>Clinical Skills Checklists</h2>
-    <div class="skills-grid">
-
-      <div class="card">Clinical Social Worker<br><a href="https://forms.gle/EG1Ua3r3hVyeKqaq6">Attempt Checklist</a></div>
+    <div class="card slide-in-left">Outpatient Clinic<br><a href="https://forms.gle/otx3fZxnZaDZf2p98">Attempt
+        Checklist</a></div>
+    <div class="card slide-in-left">ICU<br><a href="https://forms.gle/U2DrDrPh1B638MMP6">Attempt Checklist</a></div>
+    <div class="card slide-in-left">PCU <br><a href="https://forms.gle/mVozjvqGzNhvE6UN9">Attempt Checklist</a></div>
+    <div class="card slide-in-left">Intermediate<br><a href="https://forms.gle/mVozjvqGzNhvE6UN9">Attempt Checklist</a>
     </div>
-  </section>
+    <div class="card slide-in-left">Stepdown<br><a href="https://forms.gle/mVozjvqGzNhvE6UN9">Attempt Checklist</a>
+    </div>
+    <div class="card slide-in-left">Observation Unit<br><a href="https://forms.gle/mVozjvqGzNhvE6UN9">Attempt
+        Checklist</a></div>
+    <div class="card slide-in-left">L&D<br><a href="https://forms.gle/s7oqHeUN44mo5WFe9">Attempt Checklist</a></div>
+    <div class="card slide-in-left">Psych<br><a href="https://forms.gle/hPvxS9FGjN6rc8Ze9">Attempt Checklist</a></div>
+    <div class="card slide-in-left">Nurse Manager Supervisor<br><a href="https://forms.gle/BQFVw1wAouDRh3c9A">Attempt
+        Checklist</a></div>
+    <div class="card slide-in-left">RN Endoscopy<br><a href="https://forms.gle/M6agt7s9HSXqnY6F7">Attempt Checklist</a>
+    </div>
+    <div class="card slide-in-left">PACU<br><a href="https://forms.gle/st1BjT1F239i9qm3A">Attempt Checklist</a></div>
+    <div class="card slide-in-left">Oncology<br><a href="https://forms.gle/iTmALFoZqs26NVh7A">Attempt Checklist</a>
+    </div>
+    <div class="card slide-in-left">Phone Triage<br><a href="https://forms.gle/UBNAMfCkUw6qQzZo8">Attempt Checklist</a>
+    </div>
+    <div class="card slide-in-left">Case Manager<br><a href="https://forms.gle/BwQHrd5Mhcz9zLHKA">Attempt Checklist</a>
+    </div>
+    <div class="card slide-in-left">Wound Care<br><a href="https://forms.gle/mNRcXA4D2S7dep7RA">Attempt Checklist</a>
+    </div>
+    <div class="card slide-in-left">PICC<br><a href="https://forms.gle/AMCpaUNcY3iCuVmR8">Attempt Checklist</a></div>
+  </div>
+</section>
 
+<!-- Allied Health Skills -->
+<section id="allied-section" class="skills-section">
+  <h2>Allied Health Skills Checklists</h2>
+  <div class="skills-grid">
+    <div class="card">RRT/CRT<br><a href="https://forms.gle/8DB2YPYqeGsSNbqP9">Attempt Checklist</a></div>
+    <div class="card">Physical Therapist<br><a href="https://forms.gle/3FhyU33xRu6erMxt8">Attempt Checklist</a></div>
+    <div class="card">Physical Therapist Assistant <br><a href="https://forms.gle/xcjWgUDF6QtH1Gpm8">Attempt
+        Checklist</a></div>
+    <div class="card">Certified Surgical Technologist<br><a href="https://forms.gle/GRrfkUcwECqN7CBY8">Attempt
+        Checklist</a></div>
+    <div class="card">X-Ray Tech<br><a href="https://forms.gle/S3nxCmFA7s9kQRJZ8">Attempt Checklist</a></div>
+    <div class="card">Sterile Processing Tech<br><a href="https://forms.gle/WE6WwYvbxM8GHVw18">Attempt Checklist</a>
+    </div>
+    <div class="card">Cardiac Echo Tech<br><a href="https://forms.gle/8o8Wz6kcTW3GKyR89">Attempt Checklist</a></div>
+    <div class="card">MRI Tech<br><a href="https://forms.gle/Qi1t9dt7y8ff1qqj6">Attempt Checklist</a></div>
+    <div class="card">Ultrasound Tech<br><a href="https://forms.gle/exehLddp1Edfzn9b6">Attempt Checklist</a></div>
+    <div class="card">Patient Care Technician <br><a href="https://forms.gle/a5GvDZKMWb9tofH5A">Attempt Checklist</a>
+    </div>
+    <div class="card">Medical Lab Tech<br><a href="https://forms.gle/GRBo9Yh5piFdjQZ87">Attempt Checklist</a></div>
+    <div class="card">Anesthesia Tech<br><a href="https://forms.gle/tgXuPrqLbi8gVSeX9">Attempt Checklist</a></div>
+    <div class="card">Phlebotomist<br><a href="https://forms.gle/6EPgH4yDXhLkRw9t6">Attempt Checklist</a></div>
+    <div class="card">Monitor Tech<br><a href="https://forms.gle/hY36HZqLefhLf9fP7">Attempt Checklist</a></div>
+    <div class="card">Paramedic<br><a href="https://forms.gle/8poKFXku65D11jeK7">Attempt Checklist</a></div>
+    <div class="card">EP Tech<br><a href="https://forms.gle/e5sZGbdwfo5dLc6t9">Attempt Checklist</a></div>
+    <div class="card">Psych Tech<br><a href="https://forms.gle/27im53mKU5xPvbux7">Attempt Checklist</a></div>
+    <div class="card">Pathology Assistant<br><a href="https://forms.gle/tmm8MsUKkhsTCzdq6">Attempt Checklist</a></div>
+    <div class="card">Endoscopy Tech<br><a href="https://forms.gle/vbNSnQmjwM5xds5R9">Attempt Checklist</a></div>
+    <div class="card">Sleep Tech<br><a href="https://forms.gle/6ahSMhUvBgHCiH4y7">Attempt Checklist</a></div>
+    <div class="card">CT Tech<br><a href="https://forms.gle/bH6cVt9zDUzGBrrVA">Attempt Checklist</a></div>
+    <div class="card">Pharmacy Tech<br><a href="https://forms.gle/1bW8TvUPG9JcFve88">Attempt Checklist</a></div>
+  </div>
+</section>
+
+<!-- Rehab Therapy Skills -->
+<section id="rehab-section" class="skills-section">
+  <h2>Clinical Skills Checklists</h2>
+  <div class="skills-grid">
+
+    <div class="card">Clinical Social Worker<br><a href="https://forms.gle/EG1Ua3r3hVyeKqaq6">Attempt Checklist</a>
+    </div>
+  </div>
+</section>
+ 
 <footer>
   <div class="footer-wrapper">
     <div class="footer-left">
