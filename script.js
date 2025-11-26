@@ -2,11 +2,17 @@ function showAll() {
   document.querySelectorAll(".skills-section").forEach(sec => sec.style.display = "block");
 }
 
-function filterByCategory(cat) {
-  document.querySelectorAll(".skills-section").forEach(sec => {
-    sec.style.display = sec.id === cat ? "block" : "none";
-  });
+function scrollToSection(id, offset = 100) { 
+  if (id === 'top') {
+    window.scrollTo({ top: offset, behavior: 'smooth' });
+  } else {
+    const element = document.getElementById(id);
+    const y = element.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
 }
+
 
 function searchSkills() {
   let input = document.getElementById("searchInput").value.toLowerCase();
