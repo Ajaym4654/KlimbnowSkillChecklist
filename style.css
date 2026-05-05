@@ -294,34 +294,116 @@ header img:hover {
 /* FOOTER */
 /* -------------------------- */
 
-footer {
-  background: #002f4d;
-  color: white;
-  margin-top: 40px;
-  padding: 40px 5%;
+.footer {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  color: #e2e8f0;
+  font-family: Arial, sans-serif;
 }
 
+/* Wrapper */
 .footer-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 25px;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-.footer-left p a {
-  color: #7cc8ff;
-  text-decoration: none;
+/* Headings */
+.footer-left h3,
+.footer-right h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  position: relative;
 }
 
-.footer-right a {
-  color: #7cc8ff;
+.footer-left h3::after,
+.footer-right h3::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: #38bdf8;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+/* Text */
+.footer-left p,
+.footer-right p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+/* Email link */
+.footer-left a {
+  color: #38bdf8;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-left a:hover {
+  color: #7dd3fc;
+}
+
+/* Social buttons */
+.social-links a {
+  display: inline-block;
+  margin-right: 15px;
+  color: #e2e8f0;
+  text-decoration: none;
+  padding: 8px 14px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: #38bdf8;
+  color: #020617;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #94a3b8;
+  border-top: 1px solid #1e293b;
 }
 
 .footer-bottom a {
-  color: #7cc8ff;
-  font-weight: bold;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: #7dd3fc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left h3::after,
+  .footer-right h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-links a {
+    display: block;
+    margin: 10px auto;
+  }
 }
 
 /* -------------------------- */
